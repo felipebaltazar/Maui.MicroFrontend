@@ -54,6 +54,15 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+
+    
+    <!--Module files references-->
+    <MauiXaml Include="..\Module.*\Views\**\*.xaml" Link="Views\%(Filename)%(Extension)">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    
+    <Compile Include="..\Module.*\Views\**\*xaml.cs" Link="Views\%(Filename)%(Extension)" />
+    <Compile Include="..\Module.*\ViewModels\**\*.cs" Link="ViewModels\$(Filename)%(Extension)" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -63,10 +72,9 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <MauiXaml Update="Views\LoginPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	</ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
 
 </Project>
