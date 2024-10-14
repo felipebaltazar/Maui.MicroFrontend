@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Maui.MicroFrontend.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="LoginPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="185"
+                SemanticProperties.Description="dot net bot in a race car number eight"
+                Source="dotnet_bot.png" />
+
+            <Entry
+                HorizontalOptions="Fill"
+                Placeholder="UserName"
+                Text="{Binding UserName}" />
+
+            <Entry
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding Password}" />
+
+            <Button
+                Command="{Binding LoginCommand}"
+                HorizontalOptions="Fill"
+                Text="Login" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
