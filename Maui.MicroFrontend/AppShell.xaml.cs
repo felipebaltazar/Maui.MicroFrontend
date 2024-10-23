@@ -1,10 +1,15 @@
-﻿namespace Maui.MicroFrontend
+﻿using Module.Abstractions;
+
+namespace Maui.MicroFrontend
 {
     public partial class AppShell : Shell
     {
-        public AppShell()
+        public AppShell(IAppInitializer appInitializer)
         {
             InitializeComponent();
+
+            var content = appInitializer.GetStartShellItem();
+            Items.Add(content);
         }
     }
 }

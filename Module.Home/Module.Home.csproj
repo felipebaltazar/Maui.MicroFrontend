@@ -37,6 +37,7 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Module.Abstractions\Module.Abstractions.csproj" />
 	  <ProjectReference Include="..\Module.Infrastructure\Module.Infrastructure.csproj" />
+	  <ProjectReference Include="..\Module.TeamComponents\Module.TeamComponents.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

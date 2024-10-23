@@ -1,12 +1,13 @@
-﻿namespace Maui.MicroFrontend
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+﻿using Module.Abstractions;
 
-            MainPage = new AppShell();
-        }
+namespace Maui.MicroFrontend;
+
+public partial class App : Application
+{
+    public App(IAppInitializer appInitializer)
+    {
+        InitializeComponent();
+
+        MainPage = new AppShell(appInitializer);
     }
 }

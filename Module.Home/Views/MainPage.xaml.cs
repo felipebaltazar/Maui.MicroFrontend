@@ -23,6 +23,11 @@ namespace Maui.MicroFrontend
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 
 }
