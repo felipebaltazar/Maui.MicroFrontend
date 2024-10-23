@@ -62,7 +62,7 @@
     </MauiXaml>
     
     <Compile Include="..\Module.*\Views\**\*xaml.cs" Link="Views\%(Filename)%(Extension)" />
-    <Compile Include="..\Module.*\ViewModels\**\*.cs" Link="ViewModels\$(Filename)%(Extension)" />
+    <Compile Include="..\Module.*\ViewModels\**\*.cs" Link="ViewModels\%(Filename)%(Extension)" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -72,9 +72,5 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
-  </ItemGroup>
 
 </Project>
